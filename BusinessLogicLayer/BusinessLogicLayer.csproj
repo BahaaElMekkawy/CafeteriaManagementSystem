@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Managers\Item\" />
+    <Folder Include="Managers\User\" />
+    <Folder Include="Managers\Order\" />
+    <Folder Include="Mappings\Item\" />
+    <Folder Include="Mappings\Order\" />
+    <Folder Include="Mappings\User\" />
+  </ItemGroup>
+
+</Project>
