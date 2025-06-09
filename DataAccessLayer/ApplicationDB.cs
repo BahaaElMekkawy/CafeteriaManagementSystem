@@ -3,7 +3,7 @@ using System.Data;
 
 namespace DataAccessLayer
 {
-    class ApplicationDB
+    public class ApplicationDB
     {
         static string connection = "Data Source=.;Initial Catalog=ITICafeteria ;Integrated Security=True;Encrypt=False;Trust Server Certificate=True";
 

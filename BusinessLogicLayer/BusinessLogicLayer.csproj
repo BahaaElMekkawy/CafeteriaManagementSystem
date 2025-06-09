@@ -11,12 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Managers\Item\" />
     <Folder Include="Managers\User\" />
     <Folder Include="Managers\Order\" />
-    <Folder Include="Mappings\Item\" />
-    <Folder Include="Mappings\Order\" />
-    <Folder Include="Mappings\User\" />
   </ItemGroup>
 
 </Project>
