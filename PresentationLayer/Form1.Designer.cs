@@ -38,12 +38,15 @@
             txtBoxItemName = new TextBox();
             AddBtn = new Button();
             panel3 = new Panel();
-            dataGridView2 = new DataGridView();
+            label2 = new Label();
+            txtBoxTotalPrice = new TextBox();
+            btnCheckout = new Button();
+            orderGridView = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MenuGridView).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)orderGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -133,9 +136,10 @@
             // 
             AddBtn.BackColor = SystemColors.Highlight;
             AddBtn.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddBtn.ForeColor = SystemColors.HighlightText;
             AddBtn.Location = new Point(507, 278);
             AddBtn.Name = "AddBtn";
-            AddBtn.Size = new Size(137, 51);
+            AddBtn.Size = new Size(162, 57);
             AddBtn.TabIndex = 0;
             AddBtn.Text = "Add";
             AddBtn.UseVisualStyleBackColor = false;
@@ -144,27 +148,62 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ButtonFace;
-            panel3.Controls.Add(dataGridView2);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(txtBoxTotalPrice);
+            panel3.Controls.Add(btnCheckout);
+            panel3.Controls.Add(orderGridView);
             panel3.Location = new Point(1400, 39);
             panel3.Name = "panel3";
             panel3.Size = new Size(392, 836);
             panel3.TabIndex = 1;
             // 
-            // dataGridView2
+            // label2
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(16, 62);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(360, 491);
-            dataGridView2.TabIndex = 3;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(16, 635);
+            label2.Name = "label2";
+            label2.Size = new Size(119, 31);
+            label2.TabIndex = 6;
+            label2.Text = "Total Price";
+            // 
+            // txtBoxTotalPrice
+            // 
+            txtBoxTotalPrice.Location = new Point(141, 641);
+            txtBoxTotalPrice.Name = "txtBoxTotalPrice";
+            txtBoxTotalPrice.Size = new Size(123, 27);
+            txtBoxTotalPrice.TabIndex = 5;
+            txtBoxTotalPrice.TextChanged += txtBoxTotalPrice_TextChanged;
+            // 
+            // btnCheckout
+            // 
+            btnCheckout.BackColor = SystemColors.Highlight;
+            btnCheckout.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCheckout.ForeColor = SystemColors.HighlightText;
+            btnCheckout.Location = new Point(104, 716);
+            btnCheckout.Name = "btnCheckout";
+            btnCheckout.Size = new Size(204, 57);
+            btnCheckout.TabIndex = 4;
+            btnCheckout.Text = "Checkout";
+            btnCheckout.UseVisualStyleBackColor = false;
+            btnCheckout.Click += btnCheckout_Click;
+            // 
+            // orderGridView
+            // 
+            orderGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            orderGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            orderGridView.Location = new Point(16, 62);
+            orderGridView.Name = "orderGridView";
+            orderGridView.RowHeadersWidth = 51;
+            orderGridView.Size = new Size(360, 491);
+            orderGridView.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(1936, 908);
+            ClientSize = new Size(1924, 908);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -178,7 +217,8 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)orderGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -188,12 +228,15 @@
         private Panel panel2;
         private DataGridView MenuGridView;
         private Panel panel3;
-        private DataGridView dataGridView2;
+        private DataGridView orderGridView;
         private Label label1;
         private Label itemTxtBoxLabel;
         private TextBox txtBoxItemPrice;
         private TextBox txtBoxItemName;
         private Button AddBtn;
         private Label PriceTxtBox;
+        private Button btnCheckout;
+        private TextBox txtBoxTotalPrice;
+        private Label label2;
     }
 }

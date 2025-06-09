@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Managers\User\" />
-    <Folder Include="Managers\Order\" />
   </ItemGroup>
 
 </Project>

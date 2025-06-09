@@ -2,10 +2,10 @@
 
 namespace BusinessLogicLayer
 {
-    public class OrderItems
+    public class OrderItems : Item
     {
         public int OrderId { get; set; }
-        public int ItemId { get; set; }
         public int Quantity { get; set; }
+        public double Total => Quantity * Price; 
     }
 }
