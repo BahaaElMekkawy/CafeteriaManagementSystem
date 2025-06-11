@@ -39,5 +39,21 @@ namespace BusinessLogicLayer
             return item;
         }
 
+        public static int InsertItem(string name, decimal price, int stock, string desc)
+        {
+            string query = $"insert into items (name, price, description,stock) values ('{name}',{price},'{desc}', {stock})";
+
+            return ApplicationDB.ExcuteNonQuery(query);
+        }
+
+
+        public static int DeleteItem(int id)
+        {
+            string query = $"delete from items where id={id} ";
+
+            return ApplicationDB.ExcuteNonQuery(query);
+        }
+
+
     }
 }
